@@ -98,7 +98,11 @@ For more advanced usage, refer to colmena's official documentation at <https://c
 
 ## Deploy through `nixos-rebuild`
 
-Using `nixos-rebuild` for remote deployment has the advantage of being similar to deploying to a local host. It only requires a few additional parameters to specify the remote host's IP address, username, and other details.
+Using `nixos-rebuild` for remote deployment has the advantage of being similar to deploying to a local host. 
+
+`nixos-rebuild` being a tool of NixOS the deployment must be done from a machine running NixOS else this tool will not be available e.g. if you have installed only Nix package manager on your machine that is not NixOS.
+
+It only requires a few additional parameters to specify the remote host's IP address, username, and other details.
 
 For instance, to deploy the configuration defined in the `nixosConfigurations.nixos-test` of your flake to a remote host, use the following command:
 
